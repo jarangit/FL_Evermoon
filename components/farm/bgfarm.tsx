@@ -1,0 +1,18 @@
+import * as React from 'react'
+// import BG from '../../assets/farm/bg.svg'
+import ImageNext from 'next/image'
+
+function BFFarm(props: any) {
+  return (<div></div>
+    // <ImageNext
+    //   {...props}
+    //   src={BG}
+    //   objectFit="cover"
+    //   layout="fill"
+    //   objectPosition="center"
+    //   alt="bg"
+    // />
+  )
+}
+
+export default BFFarm
