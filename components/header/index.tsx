@@ -44,7 +44,7 @@ function HeaderDesktop() {
     <div className="hidden xl:flex w-full ">
       <div className="flex items-center mr-auto z-0">
         <Link title="MARKETPLACE" href="#MARKETPLACE" current={false} />
-        <Link title="CAPSULES" href="#Capsules" current={false} />
+        <Link title="CAPSULES" href="/capsules" current={false} />
         <Popover className="relative">
           <Popover.Button>
             <Link title="DE-FI" href="#De-fi" current={true} />

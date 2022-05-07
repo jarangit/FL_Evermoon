@@ -8,7 +8,8 @@ import { Farm } from '../components/farm'
 
 const Index: NextPage = () => {
   return (
-    <Layout>
+    <>
+      {/* <Layout> */}
       <Head>
         <title>Evermoon</title>
         <meta name="description" content="Evermoon's NFT Marketplace" />
@@ -17,14 +18,16 @@ const Index: NextPage = () => {
 
       <main>
         <div className="relative bg">
-          <Header />
+          {/* <Header /> */}
           <Farm />
           <div className="h-16" />
         </div>
       </main>
-
+      {/* 
       <Footer />
-    </Layout>
+    </Layout> */}
+    </>
+
   )
 }
 

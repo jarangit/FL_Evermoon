@@ -3,15 +3,15 @@ import * as React from 'react'
 import ImageNext from 'next/image'
 
 function BFFarm(props: any) {
-  return (<div></div>
-    // <ImageNext
-    //   {...props}
-    //   src={BG}
-    //   objectFit="cover"
-    //   layout="fill"
-    //   objectPosition="center"
-    //   alt="bg"
-    // />
+  return (
+    <ImageNext
+      {...props}
+      src={"/assets/farm/bg.svg"}
+      objectFit="cover"
+      layout="fill"
+      objectPosition="center"
+      alt="bg"
+    />
   )
 }
 
