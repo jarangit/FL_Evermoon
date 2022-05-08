@@ -5,19 +5,19 @@ type Props = {}
 const dataProduct = [
   {
     name: "SKIN CAPSULE",
-    image: "/assets/capsules/svg/productBlue.svg",
+    image: "/assets/capsules/png/productBlue.png",
     evm: "0.982 EVM",
     price: "$ 200.00"
   },
   {
     name: "HERO CAPSULE",
-    image: "/assets/capsules/svg/prductYellow.svg",
+    image: "/assets/capsules/png/productYellow.png",
     evm: "0.982 EVM",
     price: "$ 200.00"
   },
   {
     name: "Rune CAPSULE",
-    image: "/assets/capsules/svg/productPink.svg",
+    image: "/assets/capsules/png/productPink.png",
     evm: "0.982 EVM",
     price: "$ 200.00"
   },
