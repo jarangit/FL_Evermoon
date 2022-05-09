@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CapsuleItem, MainModal } from '../../components/capsules'
+import LayoutModal from '../../components/capsules/modal/layoutModal'
 
 type Props = {}
 const dataProduct = [
@@ -27,7 +28,9 @@ const CapsulesPage = (props: Props) => {
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
       {mainModal && (
-        <MainModal setMainModal={setMainModal}/>
+        <LayoutModal>
+          <MainModal setMainModal={setMainModal} />
+        </LayoutModal>
       )}
       <div className='min-h-screen'>
         <div>
