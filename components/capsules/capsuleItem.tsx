@@ -7,9 +7,10 @@ type Props = {
   image: string;
   evm: string;
   price: string;
+  setMainModal: any;
 }
 
-const CapsuleItem = ({ name, image, evm, price }: Props) => {
+const CapsuleItem = ({ name, image, evm, price, setMainModal }: Props) => {
   return (
     <div>
       <div>
@@ -24,7 +25,7 @@ const CapsuleItem = ({ name, image, evm, price }: Props) => {
       <div className=' rounded-xl mt-5   bg-gradient-to-t p-[1px] from-[#181D31] via-[#181D31] to-[#F9D390]'>
         <div className="flex flex-col gap-3  h-full bg-[#1A2035] text-white rounded-xl p-4">
 
-          <GoldButton>
+          <GoldButton onClick={() => setMainModal(true)}>
 
             <div className='flex justify-center gap-3  items-center '>
               <Image
