@@ -66,6 +66,7 @@ const CapsulesPage = (props: Props) => {
           {dataProduct && (
             dataProduct.map((item: any, key) => (
               <CapsuleItem
+                key={key}
                 name={item.name}
                 image={item.image}
                 evm={item.evm}
