@@ -11,12 +11,21 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ /* webpack/runtime/getFullHash */
 /******/ !function() {
-<<<<<<< HEAD:.next/static/webpack/webpack.15a50c8ece0a15c6.hot-update.js
-/******/ 	__webpack_require__.h = function() { return "65f44789fb6d76e9"; }
-=======
-/******/ 	__webpack_require__.h = function() { return "8167f8f9bdaee8ad"; }
->>>>>>> 03-c-heroModal:.next/static/webpack/webpack.92e2961d911afde0.hot-update.js
+/******/ 	__webpack_require__.h = function() { return "f2d9024cd6f78e66"; }
 /******/ }();
+/******/ 
+/******/ /* webpack/runtime/compat */
+/******/ 
+/******/ 
+/******/ // noop fns to prevent runtime errors during initialization
+/******/ if (typeof self !== "undefined") {
+/******/ 	self.$RefreshReg$ = function () {};
+/******/ 	self.$RefreshSig$ = function () {
+/******/ 		return function (type) {
+/******/ 			return type;
+/******/ 		};
+/******/ 	};
+/******/ }
 /******/ 
 /******/ }
 );
