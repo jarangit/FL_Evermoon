@@ -1,5 +1,5 @@
 import React from 'react'
-import { CapsuleItem } from '../../components/capsules'
+import { CapsuleItem, MainModal } from '../../components/capsules'
 
 type Props = {}
 const dataProduct = [
@@ -25,6 +25,7 @@ const dataProduct = [
 const CapsulesPage = (props: Props) => {
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
+      <MainModal/>
       <div className='min-h-screen'>
         <div>
 
