@@ -57,7 +57,7 @@ const MainModal = ({ setMainModal }: Props) => {
                     Legendary
                   </div>
                   <div>
-                    2%
+                    3%
                   </div>
                 </div>
               </li>
