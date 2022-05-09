@@ -131,7 +131,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = function() { return "0f605f860808b3f4"; }
+=======
+/******/ 		__webpack_require__.h = function() { return "6616afe1ad1a1dc8"; }
+>>>>>>> 03-c-heroModal
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
