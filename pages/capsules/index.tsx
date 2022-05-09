@@ -1,5 +1,5 @@
 import React from 'react'
-import { CapsuleItem } from '../../components/caosule'
+import { CapsuleItem } from '../../components/capsules'
 
 type Props = {}
 const dataProduct = [

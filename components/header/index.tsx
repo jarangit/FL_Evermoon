@@ -18,6 +18,7 @@ import {
   Transition,
 } from '@headlessui/react'
 import Profile from './Profile'
+import { useRouter } from 'next/router'
 const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
@@ -40,14 +41,16 @@ const Header = () => {
 export default Header
 
 function HeaderDesktop() {
+  const router = useRouter();
+  console.log(router.asPath)
   return (
     <div className="hidden xl:flex w-full ">
       <div className="flex items-center mr-auto z-0">
-        <Link title="MARKETPLACE" href="#MARKETPLACE" current={false} />
-        <Link title="CAPSULES" href="/capsules" current={false} />
+        <Link title="MARKETPLACE" href="#MARKETPLACE" current={router.asPath == "/MARKETPLACE" ? true : false} />
+        <Link title="CAPSULES" href="/capsules" current={router.asPath == "/capsules" ? true : false} />
         <Popover className="relative">
           <Popover.Button>
-            <Link title="DE-FI" href="#De-fi" current={true} />
+            <Link title="DE-FI" href="#De-fi" current={router.asPath == "/DE-FI" ? true : false}/>
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -71,7 +74,7 @@ function HeaderDesktop() {
           </Transition>
         </Popover>
 
-        <Link title="TRIBE CHALlENGE" href="#TRIBE-CHALlenge" current={false} />
+        <Link title="TRIBE CHALlENGE" href="#TRIBE-CHALlenge" current={router.asPath == "/TRIBE-CHALlenge" ? true : false} />
       </div>
       <Profile className="" />
     </div>
