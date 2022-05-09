@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CapsuleItem, MainModal } from '../../components/capsules'
 
 type Props = {}
@@ -23,9 +23,12 @@ const dataProduct = [
   },
 ]
 const CapsulesPage = (props: Props) => {
+  const [mainModal, setMainModal] = useState(false);
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
-      <MainModal/>
+      {mainModal && (
+        <MainModal setMainModal={setMainModal}/>
+      )}
       <div className='min-h-screen'>
         <div>
 
@@ -59,11 +62,12 @@ const CapsulesPage = (props: Props) => {
         <div id="capsuleItem" className='flex gap-6 justify-between  mt-16 flex-wrap'>
           {dataProduct && (
             dataProduct.map((item: any, key) => (
-              <CapsuleItem  
-                name = {item.name}
-                image = {item.image}
-                evm = {item.evm}
-                price = {item.price}
+              <CapsuleItem
+                name={item.name}
+                image={item.image}
+                evm={item.evm}
+                price={item.price}
+                setMainModal={setMainModal}
               />
             ))
           )}
