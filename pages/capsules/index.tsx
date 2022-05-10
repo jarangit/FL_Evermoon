@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CapsuleItem, MainModal } from '../../components/capsules'
-import { OpenHeroModal, SuccessModal } from '../../components/capsules/modal'
+import { CongratsModal, OpenHeroModal, SuccessModal } from '../../components/capsules/modal'
 import LayoutModal from '../../components/capsules/modal/layoutModal'
 
 type Props = {}
@@ -28,6 +28,7 @@ const CapsulesPage = (props: Props) => {
   const [mainModal, setMainModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false)
   const [opedHeroModal, setOpedHeroModal] = useState(false)
+  const [congratsModal, setCongratsModal] = useState(false)
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
       {mainModal && (
@@ -37,7 +38,10 @@ const CapsulesPage = (props: Props) => {
         <SuccessModal setSuccessModal = {setSuccessModal} setOpedHeroModal = {setOpedHeroModal} />
       )}
       {opedHeroModal && (
-        <OpenHeroModal setOpedHeroModal = {setOpedHeroModal} />
+        <OpenHeroModal setOpedHeroModal = {setOpedHeroModal} setCongratsModal = {setCongratsModal} />
+      )}
+      {congratsModal && (
+        <CongratsModal setCongratsModal = {setCongratsModal} />
       )}
       <div className='min-h-screen'>
         <div>

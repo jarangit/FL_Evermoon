@@ -3,9 +3,10 @@ import LayoutModal from './layoutModal'
 import Image from 'next/image'
 type Props = {
   setOpedHeroModal: any;
+  setCongratsModal: any
 }
 
-const OpenHeroModal = ({ setOpedHeroModal }: Props) => {
+const OpenHeroModal = ({ setOpedHeroModal, setCongratsModal }: Props) => {
   return (
     <LayoutModal>
       <div className='relative'>
@@ -50,7 +51,10 @@ const OpenHeroModal = ({ setOpedHeroModal }: Props) => {
           </div>
         </div>
         <div className='flex gap-2 text-sm mt-6'>
-          <button className='border p-2 w-[400px] rounded border-gold-light normal-button-gold'>Open Capsules</button>
+          <button
+            className='border p-2 w-[400px] rounded border-gold-light normal-button-gold'
+            onClick={() => setCongratsModal(true)}
+          >Open Capsules</button>
         </div>
       </div>
     </LayoutModal>
