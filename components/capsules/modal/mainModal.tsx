@@ -5,11 +5,11 @@ import { GoldButton } from '../../button/goldButton'
 import LayoutModal from './layoutModal'
 
 type Props = {
-  setMainModal: any;
+  setStatus: any;
   setSuccessModal: any;
 }
 
-const MainModal = ({ setMainModal, setSuccessModal }: Props) => {
+const MainModal = ({ setStatus, setSuccessModal }: Props) => {
   return (
 
     <LayoutModal>
@@ -17,7 +17,7 @@ const MainModal = ({ setMainModal, setSuccessModal }: Props) => {
       <div className='flex flex-wrap gap-10 items-center relative'>
         <div
           className='absolute text-red-600 top-0 right-2 cursor-pointer '
-          onClick={() => setMainModal(false)}
+          onClick={() => setStatus(false)}
         >
           <Image
             src='/assets/capsules/png/icon/close.png'

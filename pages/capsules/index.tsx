@@ -1,8 +1,7 @@
+import Image from 'next/image'
 import React, { useState } from 'react'
-import { CapsuleItem, MainModal } from '../../components/capsules'
-import { CongratsModal, OpenHeroModal, SuccessModal } from '../../components/capsules/modal'
-import LayoutModal from '../../components/capsules/modal/layoutModal'
-
+import { CapsuleItem } from '../../components/capsules'
+import {ModalController} from '../../components/capsules/modal'
 type Props = {}
 const dataProduct = [
   {
@@ -25,23 +24,13 @@ const dataProduct = [
   },
 ]
 const CapsulesPage = (props: Props) => {
-  const [mainModal, setMainModal] = useState(false);
-  const [successModal, setSuccessModal] = useState(false)
-  const [opedHeroModal, setOpedHeroModal] = useState(false)
-  const [congratsModal, setCongratsModal] = useState(false)
+
+  const [openModal, setOpenModal] = useState(false)
+
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
-      {mainModal && (
-        <MainModal setMainModal={setMainModal} setSuccessModal = {setSuccessModal} />
-      )}
-      {successModal && (
-        <SuccessModal setSuccessModal = {setSuccessModal} setOpedHeroModal = {setOpedHeroModal} />
-      )}
-      {opedHeroModal && (
-        <OpenHeroModal setOpedHeroModal = {setOpedHeroModal} setCongratsModal = {setCongratsModal} />
-      )}
-      {congratsModal && (
-        <CongratsModal setCongratsModal = {setCongratsModal} />
+      {openModal && (
+          <ModalController status={openModal} setStatus={setOpenModal} />
       )}
       <div className='min-h-screen'>
         <div>
@@ -62,7 +51,7 @@ const CapsulesPage = (props: Props) => {
               </div>
               <div>UNLIMITED</div>
             </div>
-            <div>|</div>
+           <Image src='/assets/capsules/svg/line.svg' alt = "" width="60px" height="10px"/>
             <div>
               <div className='text-gold-gradient'>
                 Time Remaining
@@ -82,7 +71,7 @@ const CapsulesPage = (props: Props) => {
                 image={item.image}
                 evm={item.evm}
                 price={item.price}
-                setMainModal={setMainModal}
+                setMainModal={setOpenModal}
               />
             ))
           )}

@@ -4,9 +4,10 @@ import Image from 'next/image'
 type Props = {
   setSuccessModal: any
   setOpedHeroModal: any
+  setErrorModal: any
 }
 
-const SuccessModal = ({ setSuccessModal, setOpedHeroModal }: Props) => {
+const SuccessModal = ({ setSuccessModal, setOpedHeroModal, setErrorModal }: Props) => {
   return (
     <LayoutModal>
       <div className='relative'>
@@ -33,9 +34,10 @@ const SuccessModal = ({ setSuccessModal, setOpedHeroModal }: Props) => {
 
         <div className='flex gap-2 text-sm'>
           <button
-            className='border p-2 w-[201px] rounded border-gold-light text-gold-gradient'>Go to Inventory</button>
+            className='border p-2 w-[201px] rounded border-gold-light text-gold-gradient'
+            onClick={() => setErrorModal(true)}>Go to Inventory</button>
           <button
-            className='border p-2 w-[201px] rounded border-gold-light normal-button-gold'
+            className=' text-black border p-2 w-[201px] rounded border-gold-light normal-button-gold'
             onClick={() => setOpedHeroModal(true)}>
             Open capsules
           </button>

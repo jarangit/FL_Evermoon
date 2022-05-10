@@ -3,9 +3,10 @@ import LayoutModal from './layoutModal'
 import Image from 'next/image'
 type Props = {
   setCongratsModal: any
+  setStatus: any
 }
 
-const CongratsModal = ({ setCongratsModal }: Props) => {
+const CongratsModal = ({ setCongratsModal, setStatus }: Props) => {
   return (
     <LayoutModal>
       <div className='relative'>
@@ -117,8 +118,8 @@ const CongratsModal = ({ setCongratsModal }: Props) => {
           <button
             className='border p-2 w-[201px] rounded border-gold-light text-gold-gradient'>Close</button>
           <button
-            className='border p-2 w-[201px] rounded border-gold-light normal-button-gold'
-            onClick={() => setCongratsModal(true)}>
+            className='text-black border p-2 w-[201px] rounded border-gold-light normal-button-gold'
+            onClick={() => setStatus(false)}>
             Open More
           </button>
         </div>

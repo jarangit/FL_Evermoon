@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { GoldButton } from '../../button/goldButton'
 
@@ -8,54 +8,31 @@ type Props = {
 }
 
 const LayoutModal = ({ children }: Props) => {
-  return (
-    <div>
-      <Transition
-        appear
-        show={true}
-        as={Fragment}>
-        <Dialog
-          as="div"
-          className="fixed inset-0 z-50 overflow-y-auto"
-          onClose={() => console.log('div')}
-        >
-          <div className="min-h-screen px-4 text-center">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Dialog.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-xl" />
-            </Transition.Child>
+  const [opct, setOpct] = useState(0)
+  useEffect(() => {
+    setOpct(1)
+  }, [children])
 
-            {/* This element is to trick the browser into centering the modal contents. */}
-            <span
-              className="inline-block h-screen align-middle"
-              aria-hidden="true"
-            >
-              &#8203;
-            </span>
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              <div className="inline-block w-auto p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-[#1A2035] border-[1px] border-[#5F5F5F] shadow-xl rounded-lg font-source">
-                {children}
-              </div>
-            </Transition.Child>
-          </div>
-        </Dialog>
-      </Transition>
-    </div >
+  return (
+    // <Transition
+    //   show={children ? true : false}
+    //   enter="transition-opacity duration-75"
+    //   enterFrom="opacity-0"
+    //   enterTo="opacity-100"
+    //   leave="transition-opacity duration-150"
+    //   leaveFrom="opacity-100"
+    //   leaveTo="opacity-0"
+    // >
+    <div
+      className={`justify-center  bg-black/40 backdrop-blur-xl items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none   transition-opacity  duration-100 opacity-${opct}`}
+    >
+      <div className={`relative w-auto my-6 mx-auto max-w-7xl`} >
+        <div className="inline-block w-auto p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-[#1A2035] border-[1px] border-[#5F5F5F] shadow-xl rounded-lg font-source">
+          {children}
+        </div>
+      </div>
+    </div>
+    // </Transition>
   )
 }
 
