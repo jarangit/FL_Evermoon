@@ -86,7 +86,6 @@ const CapsulesPage = (props: Props) => {
               />
             ))
           )}
-
         </div>
       </div>
     </div>
