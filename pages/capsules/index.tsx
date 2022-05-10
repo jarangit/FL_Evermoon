@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CapsuleItem, MainModal } from '../../components/capsules'
+import { SuccessModal } from '../../components/capsules/modal'
 import LayoutModal from '../../components/capsules/modal/layoutModal'
 
 type Props = {}
@@ -25,12 +26,14 @@ const dataProduct = [
 ]
 const CapsulesPage = (props: Props) => {
   const [mainModal, setMainModal] = useState(false);
+  const [successModal, setSuccessModal] = useState(false)
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
       {mainModal && (
-        <LayoutModal>
-          <MainModal setMainModal={setMainModal} />
-        </LayoutModal>
+        <MainModal setMainModal={setMainModal} setSuccessModal = {setSuccessModal} />
+      )}
+      {successModal && (
+        <SuccessModal setSuccessModal = {setSuccessModal} />
       )}
       <div className='min-h-screen'>
         <div>

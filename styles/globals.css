@@ -328,6 +328,9 @@ input[type='number']::-webkit-outer-spin-button {
 .button-gold {
   background: linear-gradient(180deg, #f9d390 0%, #e2b15b 100%);
 }
+.normal-button-gold {
+  background: linear-gradient(180deg, #f9d390 0%, #e2b15b 100%);
+}
 
 .button-outline,
 .button-outline :before,

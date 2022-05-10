@@ -2,15 +2,17 @@ import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment } from 'react'
 import Image from 'next/image'
 import { GoldButton } from '../../button/goldButton'
+import LayoutModal from './layoutModal'
 
 type Props = {
   setMainModal: any;
+  setSuccessModal: any;
 }
 
-const MainModal = ({ setMainModal }: Props) => {
+const MainModal = ({ setMainModal, setSuccessModal }: Props) => {
   return (
 
-    <>
+    <LayoutModal>
 
       <div className='flex flex-wrap gap-10 items-center relative'>
         <div
@@ -164,7 +166,9 @@ const MainModal = ({ setMainModal }: Props) => {
             </li>
           </ul>
 
-          <GoldButton>
+          <GoldButton
+            onClick={() => setSuccessModal(true)}
+          >
 
             <div className='flex justify-center gap-3  items-center '>
               <Image
@@ -303,7 +307,7 @@ const MainModal = ({ setMainModal }: Props) => {
           </div>
         </div>
       </div>
-    </>
+    </LayoutModal>
   )
 }
 
