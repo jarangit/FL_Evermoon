@@ -28,7 +28,7 @@ const CapsulesPage = (props: Props) => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <div className="md:max-w-7xl mx-auto mt-12 px-8">
+    <div className=" mx-auto mt-12 px-8">
       {openModal && (
           <ModalController status={openModal} setStatus={setOpenModal} />
       )}
@@ -62,7 +62,7 @@ const CapsulesPage = (props: Props) => {
 
         </div>
 
-        <div id="capsuleItem" className='flex gap-6 justify-between  mt-16 flex-wrap'>
+        <div id="capsuleItem" className='flex gap-6 justify-center  mt-16 flex-wrap sm:justify-between'>
           {dataProduct && (
             dataProduct.map((item: any, key) => (
               <CapsuleItem

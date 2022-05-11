@@ -17,7 +17,7 @@ module.exports = {
           'clamp(2.25rem, 3vw + 1rem,4.5rem)',
         ],
       },
-    },
+    },  
   },
   plugins: [
     plugin(function ({ addUtilities }) {

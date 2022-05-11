@@ -9,7 +9,7 @@ type Props = {
 const CongratsModal = ({ setCongratsModal, setStatus }: Props) => {
   return (
     <LayoutModal>
-      <div className='relative'>
+      <div className='relative min-w-[300px]'>
         <div
           className='absolute  top-0 right-2 cursor-pointer '
           onClick={() => setCongratsModal(false)}
@@ -22,103 +22,119 @@ const CongratsModal = ({ setCongratsModal, setStatus }: Props) => {
         </div>
         <div className="flex text-white gap-2">
           <div>
-          Congrats!   🎉
+            Congrats!   🎉
           </div>
         </div>
-        <div className='w-[435px]'>
-          <ul className='flex flex-wrap gap-2 justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
+        <div className='w-full lg:w-[435px]'>
+          <ul className='flex flex-wrap gap-1 lg:gap-2  justify-start lg:justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
               />
             </li>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
                 alt=''
-                width="60px"
-                height="60px"
+                width="55px"
+                height="55px"
+              />
+            </li>
+            <li>
+              <Image
+                src='/assets/capsules/png/icon/avatar.png'
+                alt=''
+                width="55px"
+                height="55px"
+              />
+            </li>
+            <li>
+              <Image
+                src='/assets/capsules/png/icon/avatar.png'
+                alt=''
+                width="55px"
+                height="55px"
               />
             </li>
           </ul>
         </div>
         <div className='my-6 text-gray-400 text-xs'>
-        Available capsules: <span className="text-white">4</span>
+          Available capsules: <span className="text-white">4</span>
 
         </div>
 
         <div className='flex gap-2 text-sm'>
           <button
-            className='border p-2 w-[201px] rounded border-gold-light text-gold-gradient'>Close</button>
+            className='border p-2 w-[50%] lg:w-[201px] rounded border-gold-light text-gold-gradient'>Close</button>
           <button
-            className='text-black border p-2 w-[201px] rounded border-gold-light normal-button-gold'
+            className='text-black border p-2 w-[50%] lg:w-[201px] rounded border-gold-light normal-button-gold'
             onClick={() => setStatus(false)}>
             Open More
           </button>

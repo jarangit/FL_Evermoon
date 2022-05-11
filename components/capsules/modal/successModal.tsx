@@ -10,7 +10,7 @@ type Props = {
 const SuccessModal = ({ setSuccessModal, setOpedHeroModal, setErrorModal }: Props) => {
   return (
     <LayoutModal>
-      <div className='relative'>
+      <div className='relative min-w-[300px]'>
         <div
           className='absolute  top-0 right-2 cursor-pointer '
           onClick={() => setSuccessModal(false)}
@@ -34,10 +34,10 @@ const SuccessModal = ({ setSuccessModal, setOpedHeroModal, setErrorModal }: Prop
 
         <div className='flex gap-2 text-sm'>
           <button
-            className='border p-2 w-[201px] rounded border-gold-light text-gold-gradient'
+            className=' w-[50%] border p-2 lg:w-[201px] rounded border-gold-light text-gold-gradient'
             onClick={() => setErrorModal(true)}>Go to Inventory</button>
           <button
-            className=' text-black border p-2 w-[201px] rounded border-gold-light normal-button-gold'
+            className=' w-[50%] text-black border p-2 lg:w-[201px] rounded border-gold-light normal-button-gold'
             onClick={() => setOpedHeroModal(true)}>
             Open capsules
           </button>
