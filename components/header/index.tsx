@@ -3,12 +3,12 @@ import Moon from '../assets/moon.png'
 import Image from '../image'
 import { ComingSoonLink, Link } from './Link'
 import NextLink from 'next/link'
-// import Logo from '../../assets/logo.png'
-// import Hamburger from '../../assets/hamburger.svg'
-// import x from '../../assets/general/icon/x.svg'
-// import bg from '../../assets/starbg.svg'
+import Logo from '../../public/assets/logo.png'
+import Hamburger from '../../public/assets/hamburger.svg'
+import x from '../../public/assets/general/icon/x.svg'
+import bg from '../../public/assets/starbg.svg'
 import NextImage from 'next/image'
-// import MarketplaceSmall from '../../assets/marketsmall.svg'
+// import MarketplaceSmall from '../../public/assets/marketsmall.svg'
 
 import {
   Dialog,
@@ -18,11 +18,12 @@ import {
   Transition,
 } from '@headlessui/react'
 import Profile from './Profile'
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
+import { CardUser } from '../cardUser'
 const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
-      <div className="px-4 md:px-10 py-5 flex items-center md:max-w-7xl mx-auto">
+      <div className="px-6  py-5 flex items-center md:max-w-7xl mx-auto">
         <div className="">
           <NextLink href="/">
             <a>
@@ -42,7 +43,6 @@ export default Header
 
 function HeaderDesktop() {
   const router = useRouter();
-  console.log(router.asPath)
   return (
     <div className="hidden xl:flex w-full ">
       <div className="flex items-center mr-auto z-0">
@@ -50,7 +50,7 @@ function HeaderDesktop() {
         <Link title="CAPSULES" href="/capsules" current={router.asPath == "/capsules" ? true : false} />
         <Popover className="relative">
           <Popover.Button>
-            <Link title="DE-FI" href="#De-fi" current={router.asPath == "/DE-FI" ? true : false}/>
+            <Link title="DE-FI" href="#De-fi" current={router.asPath == "/DE-FI" ? true : false} />
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -89,11 +89,35 @@ function HeaderMobile() {
   const closeModal = () => {
     setIsOpen(false)
   }
+
+  const router = useRouter();
+
   return (
     <div className="xl:hidden w-full flex justify-end ">
-      <button type="button" onClick={openModal} className="mr-2">
-        {/* <Image className="w-8 ml-auto " src={Hamburger} alt="logo" /> */}
-      </button>
+      <div className='flex justify-between w-full items-center'>
+        <NextLink href="/">
+          <a>
+            <Image className="w-28 " src={Logo} alt="logo" />
+          </a>
+        </NextLink>
+        <div className='flex items-center gap-3'>
+          <div className='text-right text-sm hidden md:inline'>
+            <div className='text-gold-gradient font-bold ' >0.682 EVM</div>
+            <div className="text-disable">
+              <span className='mr-1'>
+                <NextImage
+                  src={'/assets/capsules/png/icon/copy.png'}
+                  alt="copy"
+                  width={"12px"}
+                  height={"12px"} />
+              </span>
+              0x1231...daw3HEJ</div>
+          </div>
+          <button type="button" onClick={openModal} className="mr-2 border p-1 border-[#5c503a] rounded-sm">
+            <Image className="w-8 ml-auto " src={Hamburger} alt="logo" />
+          </button>
+        </div>
+      </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -122,37 +146,50 @@ function HeaderMobile() {
               leaveFrom="opacity-100 translate-x-0"
               leaveTo="opacity-0 translate-x-full"
             >
-              <div className="sm:ml-auto sm:w-80 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-[#0E0E16] shadow-xl ">
+              <div className="sm:ml-auto sm:w-100 h-screen relative w-full  overflow-hidden text-left align-middle transition-all transform bg-[#0E0E16] shadow-xl ">
                 <div className="absolute inset-0 -z-10">
-                  {/* <NextImage
+                  <NextImage
                     layout="fill"
                     objectFit="cover"
                     className="h-screen"
                     src={bg}
                     alt="bgstart"
-                  /> */}
+                  />
                 </div>
-                <div className="px-4 pt-2 flex items-center bg-[#0E0E16] border-b-[1px] border-[#5c503a]">
+                <div className="px-4 py-4 flex items-center bg-[#0E0E16] border-b-[1px]  border-[#5c503a]">
                   <div className="">
                     <NextLink href="/">
                       <a>
-                        {/* <Image className="w-28 " src={Logo} alt="logo" /> */}
+                        <Image className="w-28 " src={Logo} alt="logo" />
                       </a>
                     </NextLink>
                   </div>
-                  <div className="ml-auto" onClick={closeModal}>
-                    {/* <Image className="w-8 " src={x} alt="x" /> */}
+                  <div className="ml-auto flex items-center gap-3" onClick={closeModal}>
+                    <div className='text-right text-sm hidden md:inline'>
+                      <div className='text-gold-gradient font-bold ' >0.682 EVM</div>
+                      <div className="text-disable">
+                        <span className='mr-1'>
+                          <NextImage
+                            src={'/assets/capsules/png/icon/copy.png'}
+                            alt="copy"
+                            width={"12px"}
+                            height={"12px"} />
+                        </span>
+                        0x1231...daw3HEJ
+                        </div>
+                    </div>
+                    <Image className="w-8 " src={x} alt="x" />
                   </div>
                 </div>
 
                 <div className="mt-12 mx-4">
-                  <NLink title="HOME" href="/" />
+                  <NLink title="HOME" href="/" current={router.asPath == 'currentUrl' ? true : false} />
 
                   <Disclosure>
                     {({ open }) => (
                       <>
                         <Disclosure.Button className="">
-                          <NLink title="ABOUT GAME" />
+                          <NLink title="ABOUT GAME" current={router.asPath == 'currentUrl' ? true : false} />
                         </Disclosure.Button>
                         <Disclosure.Panel className="ml-12  pb-8 font-source text-white uppercase">
                           <SubLink title="Features" />
@@ -162,9 +199,12 @@ function HeaderMobile() {
                       </>
                     )}
                   </Disclosure>
-                  <NLink title="ROADMAP" href="/#RoadMap" />
+                  <NLink title="CAPSULES" href="/capsules" current={router.asPath == '/capsules' ? true : false} />
+                  <NLink title="ROADMAP" href="/#RoadMap" current={router.asPath == 'currentUrl' ? true : false} />
                   <CLink title="PARTNERSHIP" />
                   <CLink title="NEWS" />
+                  
+                  <CardUser/>
                   {/* <Image
                     className="max-w-[300px] mx-6 md:mx-0 mt-8"
                     src={MarketplaceSmall}
@@ -179,7 +219,7 @@ function HeaderMobile() {
     </div>
   )
 
-  function NLink({ title, href }: { title: string; href?: string }) {
+  function NLink({ title, href, current }: { title: string; href?: string, current: boolean; }) {
     if (href) {
       return (
         <div
@@ -189,7 +229,7 @@ function HeaderMobile() {
           }}
         >
           <NextLink href={href}>
-            <a className="block font-source m-6 mt-0 text-white">{title}</a>
+            <a className={`block font-source m-6 mt-0 text-white ${current ? "border-l-2 border-[#E2B15B] p-2 bg-gold-gradient_mb" : ''}`}>{title}</a>
           </NextLink>
         </div>
       )
