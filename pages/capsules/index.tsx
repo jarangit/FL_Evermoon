@@ -38,7 +38,6 @@ const CapsulesPage = (props: Props) => {
 
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
-      {/* <div className=" mx-auto mt-12 px-8"> */}
       {openModal && (
         <ModalController status={openModal} setStatus={setOpenModal} />
       )}
@@ -76,7 +75,7 @@ const CapsulesPage = (props: Props) => {
           {dataProduct && (
             dataProduct.map((item: any, key) => (
               <Transition
-                // as={Fragment}
+                key={key}
                 enter="transition ease-in-out duration-500 transform"
                 enterFrom="translate-y-full"
                 enterTo="-translate-y-0"
