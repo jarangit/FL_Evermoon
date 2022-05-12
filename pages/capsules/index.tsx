@@ -1,7 +1,8 @@
+import { Transition } from '@headlessui/react'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { CapsuleItem } from '../../components/capsules'
-import {ModalController} from '../../components/capsules/modal'
+import { ModalController } from '../../components/capsules/modal'
 type Props = {}
 const dataProduct = [
   {
@@ -26,17 +27,26 @@ const dataProduct = [
 const CapsulesPage = (props: Props) => {
 
   const [openModal, setOpenModal] = useState(false)
+  const [showProduct, setShowProduct] = useState(false)
+
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setShowProduct(true)
+    }, 700)
+    return () => clearTimeout(time);
+  }, [])
 
   return (
-    <div className=" mx-auto mt-12 px-8">
+    <div className="md:max-w-7xl mx-auto mt-12 px-8">
+      {/* <div className=" mx-auto mt-12 px-8"> */}
       {openModal && (
-          <ModalController status={openModal} setStatus={setOpenModal} />
+        <ModalController status={openModal} setStatus={setOpenModal} />
       )}
       <div className='min-h-screen'>
         <div>
 
           <div className='flex flex-col justify-center text-center gap-3'>
-            <div className="font-tavi font-medium text-4xl text-gold-gradient">
+            <div className="font-tavi font-medium text-2xl md:text-4xl text-gold-gradient">
               EVERMOON CAPSULE
             </div>
             <div>
@@ -51,7 +61,7 @@ const CapsulesPage = (props: Props) => {
               </div>
               <div>UNLIMITED</div>
             </div>
-           <Image src='/assets/capsules/svg/line.svg' alt = "" width="60px" height="10px"/>
+            <Image src='/assets/capsules/svg/line.svg' alt="" width="60px" height="10px" />
             <div>
               <div className='text-gold-gradient'>
                 Time Remaining
@@ -62,17 +72,30 @@ const CapsulesPage = (props: Props) => {
 
         </div>
 
-        <div id="capsuleItem" className='flex gap-6 justify-center  mt-16 flex-wrap sm:justify-between'>
+        <div id="capsuleItem" className='flex gap-10 justify-center  mt-16 flex-wrap sm:justify-between'>
           {dataProduct && (
             dataProduct.map((item: any, key) => (
-              <CapsuleItem
-                key={key}
-                name={item.name}
-                image={item.image}
-                evm={item.evm}
-                price={item.price}
-                setMainModal={setOpenModal}
-              />
+              <Transition
+                // as={Fragment}
+                enter="transition ease-in-out duration-500 transform"
+                enterFrom="translate-y-full"
+                enterTo="-translate-y-0"
+                leave="transition ease-in-out duration-500 transform"
+                leaveFrom="translate-x-0"
+                leaveTo="-translate-x-full"
+                show={showProduct}
+              >
+                {showProduct && (
+                  <CapsuleItem
+                    key={key}
+                    name={item.name}
+                    image={item.image}
+                    evm={item.evm}
+                    price={item.price}
+                    setMainModal={setOpenModal}
+                  />
+                )}
+              </Transition>
             ))
           )}
         </div>

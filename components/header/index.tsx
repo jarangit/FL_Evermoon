@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="relative mx-auto w-full z-50">
       <div className="px-6  py-5 flex items-center md:max-w-7xl mx-auto">
-        <div className="">
+        <div className="hidden lg:inline">
           <NextLink href="/">
             <a>
               <Image className="w-28 md:w-40" src={Logo} alt="logo" />
