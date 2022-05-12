@@ -132,7 +132,7 @@ const CongratsModal = ({ setCongratsModal, setStatus }: Props) => {
 
         <div className='flex gap-2 text-sm'>
           <button
-            className='border p-2 w-[50%] lg:w-[201px] rounded border-gold-light text-gold-gradient'>Close</button>
+            className='border p-2 w-[50%] lg:w-[201px] rounded border-gold-light text-gold'>Close</button>
           <button
             className='text-black border p-2 w-[50%] lg:w-[201px] rounded border-gold-light normal-button-gold'
             onClick={() => setStatus(false)}>
