@@ -33,7 +33,7 @@ const ErrorModal = ({ setErrorModal, setStatus }: Props) => {
 
         <div className='flex gap-2 text-sm '>
           <button
-            className='border p-2  w-full lg:w-[400px] marker:rounded border-gold-light text-gold-gradient' onClick={() => setStatus(false)}>Close</button>
+            className='border p-2  w-full lg:w-[400px] marker:rounded border-gold-light text-gold' onClick={() => setStatus(false)}>Close</button>
         </div>
       </div>
     </LayoutModal>
