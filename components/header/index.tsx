@@ -27,7 +27,7 @@ const Header = () => {
         <div className="">
           <NextLink href="/">
             <a>
-              {/* <Image className="w-28 md:w-40" src={Logo} alt="logo" /> */}
+              <Image className="w-28 md:w-40" src={Logo} alt="logo" />
             </a>
           </NextLink>
         </div>

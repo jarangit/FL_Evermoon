@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from '../image'
-// import left from '../../assets/footer/left.png'
-// import right from '../../assets/footer/right.png'
-// import Logo from '../../assets/logo.png'
+import left from '../../public/assets/footer/left.png'
+import right from '../../public/assets/footer/right.png'
+import Logo from '../../public/assets/logo.png'
 import LinkNewTab from '../LinkNewTab'
-// import Telegram from '../../assets/socials/telegram.svg'
-// import Discord from '../../assets/socials/discord.svg'
-// import Facebook from '../../assets/socials/facebook.svg'
-// import Twitter from '../../assets/socials/twitter.svg'
-// import Youtube from '../../assets/socials/youtube.svg'
+import Telegram from '../../public/assets/socials/telegram.svg'
+import Discord from '../../public/assets/socials/discord.svg'
+import Facebook from '../../public/assets/socials/facebook.svg'
+import Twitter from '../../public/assets/socials/twitter.svg'
+import Youtube from '../../public/assets/socials/youtube.svg'
 import Link from 'next/link'
 
 interface Props {
@@ -24,7 +24,7 @@ const Footer = ({ className }: Props) => {
           'linear-gradient(180deg, #03091A 0%, #03091A 0.01%, #000000 100%)',
       }}
     >
-      {/* <Image
+      <Image
         className="hidden md:block absolute left-0 bottom-0 w-48 -z-10"
         src={left}
         alt="left"
@@ -35,7 +35,7 @@ const Footer = ({ className }: Props) => {
         src={right}
         alt="right"
         priority={true}
-      /> */}
+      />
       <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
       <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
         <div className="max-w-[187px] md:max-w-[217px]">
@@ -68,7 +68,7 @@ const Footer = ({ className }: Props) => {
             COMMUNITY
           </div>
           <div className="mt-4 grid grid-cols-3 gap-y-4">
-            {/* <LinkNewTab href="https://t.me/Evermoon_Community">
+            <LinkNewTab href="https://t.me/Evermoon_Community">
               <Image className="w-8" src={Telegram} alt="Telegram" />
             </LinkNewTab>
             <LinkNewTab href="https://discord.com/invite/VgtZZwWbuG">
@@ -82,7 +82,7 @@ const Footer = ({ className }: Props) => {
             </LinkNewTab>
             <LinkNewTab href="https://www.youtube.com/channel/UCFxqPU4dTufi07B13w_mMuw/videos">
               <Image className="w-8" src={Youtube} alt="Youtube" />
-            </LinkNewTab> */}
+            </LinkNewTab>
           </div>
         </div>
       </div>

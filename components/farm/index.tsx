@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 
-// import questionmark from '../../assets/general/icon/questionmark.svg'
+import questionmark from '../../public/assets/general/icon/questionmark.svg'
 import Image from '../image'
 import BFFarm from './bgfarm'
 import TextVerticalGold from './textverticalgold'
-// import EVMBNBLP from '../../assets/farm/EVM-BNB-LP.png'
-// import BreakBackground from '../../assets/farm/BreakBackground.png'
+import EVMBNBLP from '../../public/assets/farm/EVM-BNB-LP.png'
+import BreakBackground from '../../public/assets/farm/BreakBackground.png'
 import { GoldButton } from '../button/goldButton'
 import { StakeButton, StakeModal } from './stake'
 import { GlobalContext } from '../../state/global'
@@ -28,18 +28,18 @@ export const Farm = () => {
                 <TextVerticalGold>BNB</TextVerticalGold>
               </div>
               <div className="hidden absolute inset-0 lg:flex justify-center items-center">
-                {/* <Image
+                <Image
                   className="w-[40rem] fade "
                   src={BreakBackground}
                   alt="BreakBackground"
-                /> */}
+                />
               </div>
               <div className="hidden absolute inset-0 lg:flex justify-center items-center">
-                {/* <Image
+                <Image
                   className=" floating-home w-60 "
                   src={EVMBNBLP}
                   alt="EVMBNBLP"
-                /> */}
+                />
               </div>
             </div>
 
@@ -47,17 +47,17 @@ export const Farm = () => {
             <div className="ml-8 lg:ml-16 my-6 mr-8 z-10">
               <div className="flex  items-center font-source">
                 <div className="lg:hidden  relative">
-                  {/* <Image
+                  <Image
                     className="-m-8 w-[8rem] fade "
                     src={BreakBackground}
                     alt="BreakBackground"
-                  /> */}
+                  />
                   <div className="absolute  inset-0 flex justify-center items-center">
-                    {/* <Image
+                    <Image
                       className="w-[3rem] "
                       src={EVMBNBLP}
                       alt="EVMBNBLP"
-                    /> */}
+                    />
                   </div>
                 </div>
                 <div className="w-6" />
@@ -129,7 +129,7 @@ const Title = () => {
         EVERMOON FARM
       </div>
       <div className="p-[0.4rem] rounded-lg bg-[#181D31] border-[1px] border-[#5F5F5F]">
-        {/* <Image className="w-6" src={questionmark} alt="?" /> */}
+        <Image className="w-6" src={questionmark} alt="?" />
       </div>
     </div>
   )

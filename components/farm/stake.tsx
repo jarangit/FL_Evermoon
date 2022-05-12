@@ -4,7 +4,7 @@ import { errorToast, infoToast } from '../../lib/toast/toast'
 import { GlobalContext } from '../../state/global'
 import { GoldButton } from '../button/goldButton'
 import Image from '../image'
-// import X from '../../assets/general/icon/x.svg'
+import X from '../../public/assets/general/icon/x.svg'
 import { OutlineButton } from '../button/outlineButton'
 import { SolidButton } from '../button/solidButton'
 
@@ -161,7 +161,7 @@ function Staking({
         className="text-2xl font-semibold leading-6 text-white flex justify-between "
       >
         {isStake ? <div>Stake</div> : <div>Unstake</div>}
-        {/* <Image className="w-5 cursor-pointer" src={X} alt="x" onClick={(_) => closeModal()} /> */}
+        <Image className="w-5 cursor-pointer" src={X} alt="x" onClick={(_) => closeModal()} />
       </Dialog.Title>
 
       <div className="mt-2">
@@ -309,12 +309,12 @@ function StakingSuccess({ closeModal }: { closeModal: Function }) {
           />
         </svg>
         <div>Success</div>
-        {/* <Image
+        <Image
           className="ml-auto w-5 cursor-pointer"
           src={X}
           alt="x"
           onClick={(_) => closeModal()}
-        /> */}
+        />
       </Dialog.Title>
 
       <div className="mt-2">
@@ -360,12 +360,12 @@ function StakingError({ closeModal }: { closeModal: Function }) {
           />
         </svg>
         <div>Error</div>
-        {/* <Image
+        <Image
           className="ml-auto w-5 cursor-pointer"
           src={X}
           alt="x"
           onClick={(_) => closeModal()}
-        /> */}
+        />
       </Dialog.Title>
 
       <div className="mt-2">
