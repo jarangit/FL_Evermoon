@@ -26,7 +26,7 @@ const CongratsModal = ({ setCongratsModal, setStatus }: Props) => {
           </div>
         </div>
         <div className='w-full lg:w-[435px]'>
-          <ul className='grid-cols-4 lg:grid-cols-7 grid gap-2 justify-start lg:justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
+          <ul className='grid-cols-4 md:grid-cols-7 grid gap-2 justify-start lg:justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
             <li>
               <Image
                 src='/assets/capsules/png/icon/avatar.png'
