@@ -205,7 +205,7 @@ const MainModal = ({ setStatus, setSuccessModal }: Props) => {
             </div>
 
             <div className='w-full'>
-              <ul className=' grid-cols-4 lg:grid-cols-7 grid gap-2 justify-start lg:justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
+              <ul className=' grid-cols-4 md:grid-cols-7 grid gap-2 justify-start lg:justify-between my-3 bg-[#121624] p-6 rounded-md w-full'>
                 <li className='text-xs'>
                   <Image
                     src='/assets/capsules/png/icon/avatar.png'
