@@ -18,7 +18,7 @@ const dataProduct = [
     price: "$ 200.00"
   },
   {
-    name: "Rune CAPSULE",
+    name: "RUNE CAPSULE",
     image: "/assets/capsules/png/productPink.png",
     evm: "0.982 EVM",
     price: "$ 200.00"

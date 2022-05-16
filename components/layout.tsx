@@ -9,7 +9,7 @@ const Layout = (props: any) => {
       <Header />
       <main>
         <div className="relative bg">
-          <div className={`p-0 text-white `}>
+          <div className={`p-1 text-white `}>
             <div>{props.children}</div>
           </div>
           <div className="h-16" />

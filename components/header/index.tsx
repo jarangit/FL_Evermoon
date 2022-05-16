@@ -62,7 +62,7 @@ function HeaderDesktop() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute z-10 w-screen max-w-[170px] ">
-              <div className="mt-6 relative z-0">
+              <div className="mt-6 relative z-0 text-white">
                 <div className="py-4 pl-4 ">
                   <div>FARM</div>
                   <div className="bg-gold-light h-[2px] w-8 rounded-lg mb-4" />
