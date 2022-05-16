@@ -34,7 +34,7 @@ const SuccessModal = ({ setSuccessModal, setOpedHeroModal, setErrorModal }: Prop
 
         <div className='flex gap-2 text-sm'>
           <button
-            className=' w-[50%] border p-2 lg:w-[201px] rounded border-gold-light text-gold-gradient'
+            className=' w-[50%] border p-2 lg:w-[201px] rounded border-gold-light text-gold'
             onClick={() => setErrorModal(true)}>Go to Inventory</button>
           <button
             className=' w-[50%] text-black border p-2 lg:w-[201px] rounded border-gold-light normal-button-gold'

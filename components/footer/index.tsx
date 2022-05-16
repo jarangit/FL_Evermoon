@@ -37,9 +37,9 @@ const Footer = ({ className }: Props) => {
         priority={true}
       />
       <div className="absolute left-0 right-0  max-w-7xl mx-auto px-8 h-[1px] bg-gold opacity-30" />
-      <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8">
+      <div className="flex flex-col md:flex-row flex-wrap justify-between  lg:max-w-5xl lg:mx-auto py-12 px-8 text-white">
         <div className="max-w-[187px] md:max-w-[217px]">
-          {/* <Image className="w-full" src={Logo} alt="Logo" priority={true} /> */}
+          <Image className="w-full" src={Logo} alt="Logo" priority={true} />
           <div className="font-source text-center">
             NFT multichain MOBA game
           </div>
@@ -48,7 +48,7 @@ const Footer = ({ className }: Props) => {
           <div className="font-tavi font-semibold text-2xl text-gold-gradient">
             EXPLORE
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-y-6 font-source">
+          <div className="mt-4 grid grid-cols-2 gap-y-6 font-source text-white">
             <Link href="/#Home">
               <a>HOME</a>
             </Link>
