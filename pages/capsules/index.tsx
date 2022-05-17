@@ -4,6 +4,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { CapsuleItem } from '../../components/capsules'
 import { ModalController } from '../../components/capsules/modal'
 type Props = {}
+//MockData
 const dataProduct = [
   {
     name: "SKIN CAPSULE",
@@ -38,7 +39,6 @@ const CapsulesPage = (props: Props) => {
 
   return (
     <div className="md:max-w-7xl mx-auto mt-12 px-8">
-      {/* <div className=" mx-auto mt-12 px-8"> */}
       {openModal && (
         <ModalController status={openModal} setStatus={setOpenModal} />
       )}
@@ -76,7 +76,6 @@ const CapsulesPage = (props: Props) => {
           {dataProduct && (
             dataProduct.map((item: any, key) => (
               <Transition
-                // as={Fragment}
                 enter="transition ease-in-out duration-500 transform"
                 enterFrom="translate-y-full"
                 enterTo="-translate-y-0"

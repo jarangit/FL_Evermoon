@@ -7,7 +7,6 @@ type Props = {
 }
 
 const ModalController = ({status, setStatus}: Props) => {
-  // const [mainModal, setMainModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false)
   const [opedHeroModal, setOpedHeroModal] = useState(false)
   const [congratsModal, setCongratsModal] = useState(false)
